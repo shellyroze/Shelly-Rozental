@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='../static/css.css'> 
+    <script defer src="../static/JavaScript.js"> </script>
+</head>
+<body class="body2">
+    <div class="BrowserDiv">
+      <header>
+        <div class="container">
+          <div class="TBNav">
+              <h1 class="logo">Buy My Ticket</h1>
+              <nav>
+                <ul>
+                  <li><a href="Main.html">Home</a></li>
+                  <li><a href="TicketBrowser.html">Ticket Browser</a></li>
+                  <li><a href="LogIn.html">Log in</a></li>
+                  <li><a href="SignIn.html">sign in</a></li>
+                </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+        <div class="tohen">
+            <div class="title_container">
+              <h2>Ticket Browser</h2>
+            </div>
+            <div>
+              <label for="location">Category</label> <br>
+              <select name="cities" class="input_field">
+                <option value="All">All</option>
+                <option value="Concerts">Concerts</option>
+                <option value="Stand-up">Stand up</option>
+                <option value="Shows">Shows</option>
+                <option value="Parties">Parties</option>
+              </select>
+            </div>
+            <div>
+                <label for="location">location</label> <br>
+                <select name="locaion" class="input_field">
+                  <option value="All">All</option>
+                  <option value="Tel-Aviv">Tel Aviv</option>
+                  <option value="Beer-Sheva">Beer Sheva</option>
+                  <option value="Jerusalem">Jerusalem</option>
+                  <option value="Haifa">Haifa</option>
+                  <option value="" id="p" selected="selected">location</option>
+                </select>
+                <button class="BTN" onclick="GetLocation()">get location</button>
+
+            </div> 
+
+            <div>
+            </div>
+
+            <span>Price Range:</span>
+            <div class="price-input" >
+              <div class="field"> 
+                <span>Min</span>
+                <input type="number" class="input_field" id="inputmin" value="100">
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <span>Max</span>
+                <input type="number" class="input_field" id="inputmax" value="300">
+            </div>
+           
+          <button class="BTNS" id="findtickets" onclick="ShowTable()">Find My Tickets</button>
+          <button class="BTN" style="display: none;" id="whatYouWantToHide" onclick="Reset()">Reset Search</button>
+
+            </div>
+        </div>
+        <div class="Table">
+            <table id="myTable" style="display: none;" >
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Location</th>
+                  <th>Price</th>
+                  <th>Details</th>           
+                </tr>
+                <tr>
+                  <td>01.09.22</td>
+                  <td>Noa Kirel</td>
+                  <td>Concerts</td>
+                  <td>HaYarkon</td>
+                  <td>270₪</td>
+                  <td>Avi Levi 0521234567</td>
+                </tr>
+                <tr>
+                  <td>01.09.22</td>
+                  <td>Adir Miler</td>
+                  <td>Stand-Up</td>    
+                  <td>Habima TLV</td>
+                  <td>120₪</td>
+                  <td>Avi Levi 0521234567</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
