@@ -1,0 +1,46 @@
+
+//-     h1 insert new student
+//-     form(action="/insertStudent", method="post", required) 
+//-         label(for="") Students' name
+//-         input(type="text", name="name", required) 
+//-         br
+//-         label(for="") Email
+//-         input(type="email", name="email", required) 
+//-         br
+//-         input(type="submit", value="INSERT")
+
+doctype html
+//-extends layout
+
+head
+    link(rel="stylesheet", href="style.css")
+body.body2
+    .homeGrid
+        .nav_grid
+            header
+                .container
+                    h1.logo Buy My Ticket
+                    nav.nav_bar
+                        ul
+                            li
+                               a(href='insert') Home
+                            li
+                              a(href='TicketBrowser') Ticket Browser
+                            li
+                              a(href='Login') Log in
+                            li
+                               a(href='Signin') sign in
+        .buttons_grid
+            .buttonsContainer
+                span
+                    button#upper.HomeButton(role='button')
+                       a(href='Login') Log in
+                span
+                    button.HomeButton(role='button')
+                        a(href='Signin') Sign in
+        .WhoAreWe_grid
+            span.WhoAreWe
+                h1 Who Are We?
+                h2 Reselling and Rebuying tickets have never been so easy
+                p
+                    | An easy and reliable platform that allows you to buy and resell second-hand tickets

@@ -1,0 +1,30 @@
+doctype html
+head
+    link(rel="stylesheet", href="style.css")
+body.body2
+    .mainGrid
+      header
+        .container
+          .parkingNav
+            h1.logo Buy My Ticket
+            nav
+              ul
+                li
+                  a(href='insert') Home
+                li
+                  a(href='TicketBrowser') Ticket Browser
+                li
+                  a(href='Login') Log in
+                li
+                  a(href='Signin') sign in
+      .tohen
+        h3 #{var1}
+        .form_container
+          .title_container
+            h2 Log In Form
+            form.login(action="/checkUser",method="post", required)
+                input.input_field(type='email' name='email' placeholder='Email' required='')
+                br
+                input.input_field(type='password' name='password' placeholder='Password' required='')
+                br
+                input.BTNS(type='submit' value='Log In') 

@@ -1,0 +1,55 @@
+doctype html
+head
+    link(rel="stylesheet", href="style.css")
+    //script(type="text.javascript", src="static/JavaSc//ript.js")
+    script(type="text/javascript", src="JavaScript.js")
+body.body2
+    .BrowserDiv
+      header
+        .container
+          .TBNav
+            h1.logo Buy My Ticket
+            nav
+              ul
+                li
+                  a(href='insert') Home
+                li
+                  a(href='TicketBrowser') Ticket Browser
+                li
+                  a(href='Login') Log in
+                li
+                  a(href='Signin') sign in
+      .tohen
+        .title_container
+          h3 #{var1}
+          h2 Ticket Browser
+          form(action="/ShowTickets",method="post", required)
+            label(for='Category') Category:
+            br
+            input#Concerts(type='radio' name='Category' value='concert' required)
+            label(for='Concerts') Concerts
+            input#Stand-up(type='radio' name='Category' value='stand-up')
+            label(for='Stand-up') Stand-up
+            input#shows(type='radio' name='Category' value='show')
+            label(for='shows') shows
+            br
+            label(for='location') location:
+            button.BTN(type='button' onclick='GetLocation()') get location
+            br
+            input#Tel-Aviv(type='radio' name='location' value='tel-Aviv' required)
+            label(for='Tel-Aviv') Tel-Aviv
+            input#Beer-Sheva(type='radio' name='location' value='Beer-Sheva')
+            label(for='Beer-Sheva') Beer-Sheva
+            input#Haifa(type='radio' name='location' value='Haifa')
+            label(for='Haifa') Haifa
+            input#Jerusalem(type='radio' name='location' value='Jerusalem')
+            label(for='Jerusalem') Jerusalem
+            br
+            label(for='price') price range: 
+            br
+            input.input_field(type='number' min ='100' max ='1000' name = 'min' value='100')
+            input.input_field(type='number' min ='100' max ='1000' name = 'max' value='1000')
+            br
+            input.BTNS(type='submit' onclick='ShowTable()', value='Submit')
+            input.BTN(type='reset' value='Reset', onclick='ShowTable()')
+

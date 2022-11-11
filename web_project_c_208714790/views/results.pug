@@ -1,0 +1,56 @@
+//- extends layout
+//- block content
+//-     h1 #{var1}
+//-     table
+//-         tr
+//-             th id 
+//-             th name 
+//-             th email 
+//-         each n in Students
+//-             tr 
+//-             td= n.id   
+//-             td= n.name   
+//-             td= n.email   
+
+//- extends layout
+//- block content
+
+doctype html
+head
+    link(rel="stylesheet", href="style.css")
+body.body2
+    .mainGrid
+      header
+        .container
+          .parkingNav
+            h1.logo Buy My Ticket
+            nav
+              ul
+                li
+                  a(href='insert') Home
+                li
+                  a(href='TicketBrowser') Ticket Browser
+                li
+                  a(href='Login') Log in
+                li
+                  a(href='Signin') sign in
+    h1 #{var1}
+    table
+        tr
+            th name 
+            th category 
+            th location 
+            th date 
+            th price 
+            th contact
+        each n in Tickets
+            tr 
+            td= n.name   
+            td= n.category   
+            td= n.location  
+            td= n.date   
+            td= n.price 
+            td= n.contact 
+    span
+            a.BTN(href='TicketBrowser') Back to Search
+
